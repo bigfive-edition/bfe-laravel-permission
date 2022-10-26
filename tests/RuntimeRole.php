@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Permission\Test;
+namespace Bfe\Permission\Test;
 
-class RuntimeRole extends \Spatie\Permission\Models\Role
+class RuntimeRole extends \Bfe\Permission\Models\Role
 {
     protected $visible = [
       'id',

@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Permission\Test;
+namespace Bfe\Permission\Test;
 
 use Artisan;
-use Spatie\Permission\Contracts\Role;
+use Bfe\Permission\Contracts\Role;
 
 class BladeTest extends TestCase
 {

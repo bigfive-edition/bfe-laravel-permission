@@ -34,7 +34,7 @@ $user->syncRoles(params);
 ### Manual cache reset
 To manually reset the cache for this package, you can run the following in your app code:
 ```php
-app()->make(\Spatie\Permission\PermissionRegistrar::class)->forgetCachedPermissions();
+app()->make(\Bfe\Permission\PermissionRegistrar::class)->forgetCachedPermissions();
 ```
 
 Or you can use an Artisan command:

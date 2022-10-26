@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission;
+namespace Bfe\Permission;
 
 use Illuminate\Cache\CacheManager;
 use Illuminate\Contracts\Auth\Access\Authorizable;
@@ -8,8 +8,8 @@ use Illuminate\Contracts\Auth\Access\Gate;
 use Illuminate\Contracts\Cache\Repository;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Database\Eloquent\Collection;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Contracts\Role;
+use Bfe\Permission\Contracts\Permission;
+use Bfe\Permission\Contracts\Role;
 
 class PermissionRegistrar
 {
@@ -230,7 +230,7 @@ class PermissionRegistrar
     /**
      * Get an instance of the permission class.
      *
-     * @return \Spatie\Permission\Contracts\Permission
+     * @return \Bfe\Permission\Contracts\Permission
      */
     public function getPermissionClass(): Permission
     {
@@ -249,7 +249,7 @@ class PermissionRegistrar
     /**
      * Get an instance of the role class.
      *
-     * @return \Spatie\Permission\Contracts\Role
+     * @return \Bfe\Permission\Contracts\Role
      */
     public function getRoleClass(): Role
     {

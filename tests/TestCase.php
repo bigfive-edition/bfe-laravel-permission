@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission\Test;
+namespace Bfe\Permission\Test;
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Http\Request;
@@ -8,29 +8,29 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Schema;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Contracts\Role;
-use Spatie\Permission\PermissionRegistrar;
-use Spatie\Permission\PermissionServiceProvider;
+use Bfe\Permission\Contracts\Permission;
+use Bfe\Permission\Contracts\Role;
+use Bfe\Permission\PermissionRegistrar;
+use Bfe\Permission\PermissionServiceProvider;
 
 abstract class TestCase extends Orchestra
 {
-    /** @var \Spatie\Permission\Test\User */
+    /** @var \Bfe\Permission\Test\User */
     protected $testUser;
 
-    /** @var \Spatie\Permission\Test\Admin */
+    /** @var \Bfe\Permission\Test\Admin */
     protected $testAdmin;
 
-    /** @var \Spatie\Permission\Models\Role */
+    /** @var \Bfe\Permission\Models\Role */
     protected $testUserRole;
 
-    /** @var \Spatie\Permission\Models\Role */
+    /** @var \Bfe\Permission\Models\Role */
     protected $testAdminRole;
 
-    /** @var \Spatie\Permission\Models\Permission */
+    /** @var \Bfe\Permission\Models\Permission */
     protected $testUserPermission;
 
-    /** @var \Spatie\Permission\Models\Permission */
+    /** @var \Bfe\Permission\Models\Permission */
     protected $testAdminPermission;
 
     /** @var bool */
@@ -100,8 +100,8 @@ abstract class TestCase extends Orchestra
         $app['config']->set('auth.guards.admin', ['driver' => 'session', 'provider' => 'admins']);
         $app['config']->set('auth.providers.admins', ['driver' => 'eloquent', 'model' => Admin::class]);
         if ($this->useCustomModels) {
-            $app['config']->set('permission.models.permission', \Spatie\Permission\Test\Permission::class);
-            $app['config']->set('permission.models.role', \Spatie\Permission\Test\Role::class);
+            $app['config']->set('permission.models.permission', \Bfe\Permission\Test\Permission::class);
+            $app['config']->set('permission.models.role', \Bfe\Permission\Test\Role::class);
         }
         // Use test User model for users provider
         $app['config']->set('auth.providers.users.model', User::class);

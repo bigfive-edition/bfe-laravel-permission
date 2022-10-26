@@ -1,10 +1,10 @@
 <?php
 
-namespace Spatie\Permission\Test;
+namespace Bfe\Permission\Test;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use Spatie\Permission\Contracts\Permission;
+use Bfe\Permission\Contracts\Permission;
 
 class MultipleGuardsTest extends TestCase
 {

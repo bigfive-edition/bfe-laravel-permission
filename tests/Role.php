@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Permission\Test;
+namespace Bfe\Permission\Test;
 
-class Role extends \Spatie\Permission\Models\Role
+class Role extends \Bfe\Permission\Models\Role
 {
     protected $primaryKey = 'role_test_id';
 

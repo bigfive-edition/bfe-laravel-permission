@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission\Test;
+namespace Bfe\Permission\Test;
 
 class HasRolesWithCustomModelsTest extends HasRolesTest
 {

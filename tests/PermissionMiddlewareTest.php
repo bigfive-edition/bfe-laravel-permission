@@ -1,15 +1,15 @@
 <?php
 
-namespace Spatie\Permission\Test;
+namespace Bfe\Permission\Test;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
 use InvalidArgumentException;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Exceptions\UnauthorizedException;
-use Spatie\Permission\Middlewares\PermissionMiddleware;
+use Bfe\Permission\Contracts\Permission;
+use Bfe\Permission\Exceptions\UnauthorizedException;
+use Bfe\Permission\Middlewares\PermissionMiddleware;
 
 class PermissionMiddlewareTest extends TestCase
 {

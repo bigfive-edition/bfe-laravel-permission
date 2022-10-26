@@ -1,10 +1,10 @@
 <?php
 
-namespace Spatie\Permission\Test;
+namespace Bfe\Permission\Test;
 
 use Illuminate\Support\Facades\Artisan;
-use Spatie\Permission\Models\Permission;
-use Spatie\Permission\Models\Role;
+use Bfe\Permission\Models\Permission;
+use Bfe\Permission\Models\Role;
 
 class CommandTest extends TestCase
 {
@@ -162,7 +162,7 @@ class CommandTest extends TestCase
     public function it_can_show_roles_by_teams()
     {
         config()->set('permission.teams', true);
-        app(\Spatie\Permission\PermissionRegistrar::class)->initializeCache();
+        app(\Bfe\Permission\PermissionRegistrar::class)->initializeCache();
 
         Role::create(['name' => 'testRoleTeam', 'team_test_id' => 1]);
         Role::create(['name' => 'testRoleTeam', 'team_test_id' => 2]); // same name different team

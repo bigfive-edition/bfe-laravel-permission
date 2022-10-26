@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Permission;
+namespace Bfe\Permission;
 
 use Illuminate\Support\Collection;
-use Spatie\Permission\Exceptions\WildcardPermissionNotProperlyFormatted;
+use Bfe\Permission\Exceptions\WildcardPermissionNotProperlyFormatted;
 
 class WildcardPermission
 {

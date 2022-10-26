@@ -20,9 +20,9 @@ This package comes with `RoleMiddleware`, `PermissionMiddleware` and `RoleOrPerm
 ```php
 protected $routeMiddleware = [
     // ...
-    'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
-    'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
-    'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
+    'role' => \Bfe\Permission\Middlewares\RoleMiddleware::class,
+    'permission' => \Bfe\Permission\Middlewares\PermissionMiddleware::class,
+    'role_or_permission' => \Bfe\Permission\Middlewares\RoleOrPermissionMiddleware::class,
 ];
 ```
 

@@ -35,7 +35,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Permission\\": "src"
+            "Bfe\\Permission\\": "src"
         },
         "files": [
             "src/helpers.php"
@@ -43,13 +43,13 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Permission\\Test\\": "tests"
+            "Bfe\\Permission\\Test\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Permission\\PermissionServiceProvider"
+                "Bfe\\Permission\\PermissionServiceProvider"
             ]
         },
         "branch-alias": {

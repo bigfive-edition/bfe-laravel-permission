@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Permission\Test;
+namespace Bfe\Permission\Test;
 
 use DB;
-use Spatie\Permission\PermissionRegistrar;
+use Bfe\Permission\PermissionRegistrar;
 
 class HasPermissionsWithCustomModelsTest extends HasPermissionsTest
 {

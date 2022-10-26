@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Permission\Test;
+namespace Bfe\Permission\Test;
 
-use Spatie\Permission\Exceptions\PermissionDoesNotExist;
-use Spatie\Permission\Exceptions\WildcardPermissionInvalidArgument;
-use Spatie\Permission\Exceptions\WildcardPermissionNotProperlyFormatted;
-use Spatie\Permission\Models\Permission;
+use Bfe\Permission\Exceptions\PermissionDoesNotExist;
+use Bfe\Permission\Exceptions\WildcardPermissionInvalidArgument;
+use Bfe\Permission\Exceptions\WildcardPermissionNotProperlyFormatted;
+use Bfe\Permission\Models\Permission;
 
 class WildcardHasPermissionsTest extends TestCase
 {
