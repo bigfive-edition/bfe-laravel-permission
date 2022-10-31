@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+use Bfe\Permission\PermissionRegistrar;
+
+class AddTeamsIdToUsers extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+       
+      Schema::table('account_users', function (Blueprint $table) {
+        $table->unsignedBigInteger('teams_id')->nullable();
+        $table->uuid('teams_id')->index();
+        $table->foreign('teams_id','user_teams_id_fkey')->references('id')->on('account_users')->onDelete('cascade');
+         
+      })
+     
+
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+
+    }
+}

@@ -59,6 +59,10 @@ class PermissionServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../database/migrations/create_permission_tables.php.stub' => $this->getMigrationFileName('create_permission_tables.php'),
         ], 'migrations');
+
+        $this->publishes([
+            __DIR__.'/../database/migrations/add_teams_id_to_users_tables.php.stub' => $this->getMigrationFileName('add_teams_id_to_users_tables.php'),
+        ], 'migrations');
     }
 
     protected function registerCommands()
