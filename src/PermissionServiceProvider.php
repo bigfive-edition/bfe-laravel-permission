@@ -11,6 +11,9 @@ use Illuminate\View\Compilers\BladeCompiler;
 use Bfe\Permission\Contracts\Permission as PermissionContract;
 use Bfe\Permission\Contracts\Role as RoleContract;
 
+use Illuminate\Support\Facades\Gate;
+use Bfe\Permission\Gates\AdminGate;
+
 class PermissionServiceProvider extends ServiceProvider
 {
     public function boot(PermissionRegistrar $permissionLoader)
@@ -31,6 +34,8 @@ class PermissionServiceProvider extends ServiceProvider
         $this->app->singleton(PermissionRegistrar::class, function ($app) use ($permissionLoader) {
             return $permissionLoader;
         });
+
+       
     }
 
     public function register()
