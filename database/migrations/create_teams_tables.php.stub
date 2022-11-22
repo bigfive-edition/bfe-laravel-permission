@@ -1,0 +1,49 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+use Bfe\Permission\PermissionRegistrar;
+
+class CreateTeamsTables extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        $tableNames = config('permission.table_names');
+        $columnNames = config('permission.column_names');
+        $teams = config('permission.teams');
+
+        if (empty($tableNames)) {
+            throw new \Exception('Error: config/permission.php not loaded. Run [php artisan config:clear] and try again.');
+        }
+        if ($teams && empty($columnNames['team_foreign_key'] ?? null)) {
+            throw new \Exception('Error: team_foreign_key on config/permission.php not loaded. Run [php artisan config:clear] and try again.');
+        }
+
+        Schema::create($tableNames['teams'], function (Blueprint $table) {
+            $table->bigIncrements('id'); // permission id
+            $table->string('slug'); 
+            $table->string('name');       // For MySQL 8.0 use string('name', 125);
+             $table->foreignId('owner_id')->index(); // For MySQL 8.0 use string('guard_name', 125);
+            $table->timestamps();
+
+            $table->unique(['name', 'guard_name']);
+        });
+
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+       
+    }
+}

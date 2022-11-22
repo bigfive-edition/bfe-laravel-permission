@@ -26,6 +26,9 @@ return [
 
         'role' => Bfe\Permission\Models\Role::class,
 
+
+        'team' => Bfe\Permission\Models\Team::class,
+
     ],
 
     'table_names' => [
@@ -38,6 +41,20 @@ return [
 
         'roles' => 'roles',
 
+
+          /*
+         * When using the "HasTrams" trait from this package, we need to know which
+         * table should be used to retrieve your roles. We have chosen a basic
+         * default value but you may easily change it to any table you like.
+         */
+
+        'teams' => 'teams',
+
+
+
+        'team_members' => 'team_members',
+
+        'user_has_permissions_on_model' => 'user_has_permissions_on_model',
         /*
          * When using the "HasPermissions" trait from this package, we need to know which
          * table should be used to retrieve your permissions. We have chosen a basic

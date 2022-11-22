@@ -1,0 +1,47 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+use Bfe\Permission\PermissionRegistrar;
+
+class CreateTeamMembersTables extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        $tableNames = config('permission.table_names');
+        $columnNames = config('permission.column_names');
+        $teams = config('permission.teams');
+
+        if (empty($tableNames)) {
+            throw new \Exception('Error: config/permission.php not loaded. Run [php artisan config:clear] and try again.');
+        }
+        if ($teams && empty($columnNames['team_foreign_key'] ?? null)) {
+            throw new \Exception('Error: team_foreign_key on config/permission.php not loaded. Run [php artisan config:clear] and try again.');
+        }
+
+        Schema::create($tableNames['team_members'], function (Blueprint $table) {
+            $table->bigIncrements('id'); // permission id
+            $table->foreignId('team_id')->index();  
+            $table->foreignId('user_id')->index();      
+            $table->foreignId('role_id')->index(); 
+            $table->timestamps();
+        });
+
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+       
+    }
+}
