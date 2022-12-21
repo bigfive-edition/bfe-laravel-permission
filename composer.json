@@ -65,5 +65,5 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "repository": "bigfive-edition/bfe-laravel-permission"
+    "repository": "bfe/bfe-laravel-permission"
 }
