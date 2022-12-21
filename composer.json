@@ -11,13 +11,13 @@
         "rbac",
         "security"
     ],
-    "homepage": "https://github.com/spatie/laravel-permission",
+    "homepage": "https://github.com/bigfive-edition/bfe-laravel-permission",
     "license": "MIT",
     "authors": [
         {
-            "name": "Freek Van der Herten",
-            "email": "freek@spatie.be",
-            "homepage": "https://spatie.be",
+            "name": "BIG FIVE",
+            "email": "henri@bigfiveabidjan.com",
+            "homepage": "https://bigfiveabidjan.com",
             "role": "Developer"
         }
     ],

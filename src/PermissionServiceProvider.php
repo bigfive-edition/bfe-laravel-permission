@@ -30,7 +30,8 @@ class PermissionServiceProvider extends ServiceProvider
             $permissionLoader->clearClassPermissions();
             $permissionLoader->registerPermissions();
         }
-
+         
+        $this->loadRoutesFrom(__DIR__.'/routes/web.php');
         $this->app->singleton(PermissionRegistrar::class, function ($app) use ($permissionLoader) {
             return $permissionLoader;
         });

@@ -6,7 +6,7 @@
 To get started with using the package, we'll install it using the following command:
 
 ```php
-
+composer require bfe/laravel-permission
 ```
 Now that we've installed the package, we'll need to publish the database migration and config file:
 
