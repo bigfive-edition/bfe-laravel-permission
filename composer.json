@@ -1,5 +1,5 @@
 {
-    "name": "bfe/laravel-permission",
+    "name": "bigfive-edition/bfe-laravel-permission",
     "description": "Permission handling for Laravel 6.0 and up",
     "keywords": [
         "spatie",
@@ -65,5 +65,5 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "repository": "bfe/bfe-laravel-permission"
+    "repository": "bigfive-edition/bfe-laravel-permission"
 }
